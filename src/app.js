@@ -41,11 +41,6 @@ const start = async () => {
     subscriptionsEndpoint: `ws://localhost:${process.env.PORT}/subscriptions`
   }));
 
-  // app.listen(process.env.PORT, () => {
-  //   console.log(`Environment: ${process.env.NODE_ENV}`);
-  //   console.log(`Express: ${process.env.PORT}`);
-  // });
-
   const server = createServer(app);
   server.listen(process.env.PORT, () => {
     SubscriptionServer.create(
